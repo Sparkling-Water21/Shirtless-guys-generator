@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos de hombres famosos con abdominales</title>
+    <style>
+        body {
+            background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+            color: white;
+            text-align: center;
+            font-family: 'Bubblegum Sans', cursive; /* Cambio de la fuente */
+        }
+        #container {
+            margin-top: 50px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"> <!-- Añadida la fuente Bubblegum -->
+</head>
+<body>
+    <h1>Fotos de hombres famosos con abdominales</h1>
+    <div id="container">
+        <img id="celebImg" src="" alt="Imagen de celebridad">
+        <button onclick="cambiarImagen()">A ver más</button>
+    </div>
+    <audio autoplay loop>
+        <source src="https://youtu.be/bQTEge1dLmc?si=B15cz9C0xQZDvvkA" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="guardarImagen()">Guardar este archivo</button>
+    <script>
+        var celebImages = [
+            "https://images.app.goo.gl/zTfe99QQz5zbTpdu7",
+            "https://images.app.goo.gl/vbiC5hRYm35huFkc6",
+            "https://images.app.goo.gl/EhWHa3Yn1j1YrGMt5"
+            //https://images.app.goo.gl/zYd5wZkAujwzLAjF8
+        ];
+        var currentIndex = 0;
+
+        function cambiarImagen() {
+            var imgElement = document.getElementById("celebImg");
+            currentIndex = (currentIndex + 1) % celebImages.length;
+            imgElement.src = celebImages[currentIndex];
+        }
+
+        function guardarImagen() {
+            var imgElement = document.getElementById("celebImg");
+            var imgURL = imgElement.src;
+            // Aquí podrías agregar la lógica para guardar la imagen en el dispositivo del usuario
+            alert("¡Imagen guardada correctamente!");
+        }
+    </script>
+    <footer>Feliz mes LGBTQ+</footer>
+</body>
+</html
